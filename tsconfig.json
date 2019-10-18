@@ -1,0 +1,17 @@
+{
+  "exclude": [
+    "node_modules",
+    "sln",
+    "doc",
+    "enumerate-zmdi-icons",
+    ".vs"
+  ],
+  "compilerOptions": {
+    "lib": [ "dom", "es2018.promise", "es2018", "es2015", "es2015.promise" ],
+    "module": "none",
+    "noImplicitAny": true,
+    "target": "esnext",
+    "skipLibCheck": true
+  },
+  "compileOnSave": false
+}

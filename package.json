@@ -1,0 +1,31 @@
+{
+  "name": "echo.dev",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "@types/vue": "^2.0.0",
+    "gulp": "^4.0.2",
+    "gulp-cli": "^2.2.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-typescript": "^5.0.1",
+    "gulp-uglify-es": "^1.0.4",
+    "typescript": "^3.6.4",
+    "vue": "^2.6.10"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GuilhermeES/todolist.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GuilhermeES/todolist/issues"
+  },
+  "homepage": "https://github.com/GuilhermeES/todolist#readme"
+}

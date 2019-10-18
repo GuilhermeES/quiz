@@ -11,4 +11,8 @@ class BD{
         return new PDO("mysql:host=localhost;dbname=quiz","root","");
     }
 }
+
 $app->get('/',App\Controller\HomeController::class . ':inicio' );
+$app->get('/login',App\Controller\UserController::class . ':login' );
+
+$app->run();

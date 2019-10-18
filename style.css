@@ -1,0 +1,15 @@
+/*cor da navbar*/
+.navbar-expand-lg{
+    background-color: #2764a8;
+    box-shadow: 0 50px 40px rgba(0,0,0,.04);
+}
+/*Quiz*/
+.navbar-light .navbar-brand {
+    color: white;
+    font-size: 23px;
+}
+/*Botao de login e registro*/
+.navbar-light .navbar-nav .nav-link{
+    color: white;
+    font-size: 23px;
+}

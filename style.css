@@ -13,3 +13,44 @@
     color: white;
     font-size: 23px;
 }
+.form-signin {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+    margin-top: 6%;
+    border: 1px solid;
+}
+
+body{
+    background-color: #f5f8fa;
+    height: 100%;
+}
+.font-weight-normal{
+    text-align: center;
+}
+.form-signin .form-control {
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
+}
+.form-signin .form-control:focus {
+    z-index: 2;
+}
+.form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+.font-weight-bold {
+    color: white;
+    padding: 30px;
+    font-size: 20px;
+}

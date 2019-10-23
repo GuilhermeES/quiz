@@ -2,7 +2,8 @@
     "require": {
         "slim/slim": "4.0.0",
         "slim/psr7": "^0.6.0",
-      "ext-pdo": "*"
+      "ext-pdo": "*",
+      "ext-json": "*"
     },
     "autoload": {
         "psr-4": {

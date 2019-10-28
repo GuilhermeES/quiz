@@ -22,7 +22,6 @@ let app = new Vue({
                 .then(function (resposta) {
                     that.usuario = resposta;
                 })
-
         }
     }
 });

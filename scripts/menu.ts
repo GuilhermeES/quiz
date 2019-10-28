@@ -17,6 +17,9 @@ Vue.component('menu-quiz', {
                     <li class="nav-item" v-if="usuario != null">
                          <button class="btn  btn-secondary btn-block" v-on:click="logout" >Sair</button>
                     </li>
+                    <li class="nav-item" v-if="usuario != null">
+                         <a class="nav-link" href="/quiz">Lista</a>
+                    </li>
                 </ul>
             </div>
         </nav>`,

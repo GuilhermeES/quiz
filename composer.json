@@ -3,7 +3,9 @@
         "slim/slim": "4.0.0",
         "slim/psr7": "^0.6.0",
       "ext-pdo": "*",
-      "ext-json": "*"
+      "ext-json": "*",
+        "slim/php-view": "^2.2",
+      "ext-mysql_xdevapi": "*"
     },
     "autoload": {
         "psr-4": {

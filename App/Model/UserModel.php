@@ -25,7 +25,7 @@ class UserModel
         $stmt->bindValue(":email", $email);
         $stmt->bindValue(":senha", sha1($senha));
         $stmt->execute();
-        $validacao = $stmt->fetch();
+        $validacao = $stmt->fetch(PDO::FETCH_ASSOC);
 
         if($validacao){
             $_SESSION['id'] = $validacao['id'];
@@ -41,7 +41,7 @@ class UserModel
         $stmt = $this->bd->prepare($sql);
         $stmt->bindValue(":id", $id);
         $stmt->execute();
-        return $stmt->fetch();
+        return $stmt->fetch(PDO::FETCH_ASSOC);
     }
     //Função para destruir a sessão
     public function logout(){

@@ -1,6 +1,6 @@
 /*cor da navbar*/
 .navbar-expand-lg{
-    background-color: #2764a8;
+    background-color: #31a3b4;
     box-shadow: 0 50px 40px rgba(0,0,0,.04);
 }
 /*Quiz*/
@@ -53,4 +53,35 @@ body{
     color: white;
     padding: 30px;
     font-size: 20px;
+}
+.addpergunta{
+    padding: 30px;
+    width: 55%;
+}
+.border-1{
+    border: 1px solid;
+    padding: 20px;
+}
+.border-2{
+    border: 1px solid;
+    color: blue;
+    padding: 20px;
+}
+.border-3{
+    border: 1px solid;
+    color: red;
+    padding: 20px;
+}
+.lista-quiz{
+    margin-top: 5%;
+    width: 70%;
+}
+.btn-outline-danger{
+    float: right;
+}
+.btn-outline-info{
+    float: right;
+}
+.font-weight-light{
+    font-size: 30px;
 }

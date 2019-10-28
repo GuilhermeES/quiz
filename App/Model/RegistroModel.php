@@ -30,4 +30,5 @@ class RegistroModel
         $stmt->execute();
         return $this->bd->lastInsertId();
     }
+
 }

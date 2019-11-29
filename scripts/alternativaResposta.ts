@@ -4,7 +4,7 @@ Vue.component('alternativa-resposta', {
   <div class="container">
       <br>
         <div class="border-4">
-            <input type='radio' :name="alternativa_data.perguntas_id" :value="alternativa_data.id" v-model='respondido'>
+            <input type='radio' :name="alternativa_data.perguntas_id" :value="alternativa_data.id" v-model='respondido_data'>
             {{alternativa_data.texto}}<br/>
         </div>
   </div>
@@ -12,6 +12,7 @@ Vue.component('alternativa-resposta', {
     data: function() {
         return {
             alternativa_data: this.alternativa,
+            respondido_data: this.respondido,
         }
     },
     computed:{
@@ -22,6 +23,15 @@ Vue.component('alternativa-resposta', {
     watch: {
         alternativa(valor:any){
             this.alternativa_data = valor;
+        },
+        respondido(valor:any){
+            this.respondido_data = valor;
+        },
+
+        respondido_data(valor: number){
+            if (valor == this.alternativa_data.id){
+                this.$emit('update:respondido', valor)
+            }
         },
 
         correta(valor: number) {

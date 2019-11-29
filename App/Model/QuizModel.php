@@ -99,8 +99,8 @@ class QuizModel
         $stmt->bindValue('usuario_id',$usuario_id);
         $stmt->bindValue('alternativas_id',$alternativas_id);
         $stmt->bindValue('data_cadastro', $data_cadastro);
-        $respostas = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        return $respostas;
+        $stmt->execute();
+        return $this->bd->lastInsertId();
     }
 
 }

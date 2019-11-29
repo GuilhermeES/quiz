@@ -67,10 +67,13 @@ class QuizController
                 $post = $request->getParsedBody();
 
                 $usuario_id = $_SESSION['id'];
-                $alternativas_id = $post['alternativas_id'];
+                $respostas = explode(',',$post['respostas']);
                 $data_cadastro = date('Y-m-d H:i:s');
+                $id = 0;
 
-                $id = $this->model->cadastroRespostas($usuario_id,$alternativas_id,$data_cadastro);
+                foreach ($respostas as $resposta) {
+                    $id = $this->model->cadastroRespostas($usuario_id, $resposta, $data_cadastro);
+                }
                 if ($id > 0) {
                     $payload = json_encode([
                         'error' => false,

@@ -46,7 +46,7 @@ class AlternativasModel
         return $stmt->rowCount() > 0;
 
     }
-    public function updateAlternativas($texto, $correta, $id){
+    public function Alternativas($texto, $correta, $id){
 
         $sql = "UPDATE alternativas set texto = :texto, correta = :correta WHERE id = :id";
         $stmt = $this->bd->prepare($sql);

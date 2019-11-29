@@ -1,9 +1,9 @@
 Vue.component('quiz', {
-    props: ['id'],
+    props: ['usuario','id'],
     template: `
     <div class="container">
         <div class="addpergunta">
-            <h1>Adicionar novo Quiz</h1>
+            <h1>{{quiz.nome}}</h1>
             <br>
             <div class="border-1">
   	            <input type="text" class="form-control" v-model="quiz.nome" placeholder="Escreva título do Quiz"><br/>
@@ -13,7 +13,7 @@ Vue.component('quiz', {
                 </div>
             </div>
             <br>
-            <button  :disabled="buttonDesabilitado()" v-on:click='alterar' id="botao" class="btn btn-success">Salvar</button>
+            <button :disabled="buttonDesabilitado()" v-on:click='alterar' id="botao" class="btn btn-success">Salvar</button>
         </div>
     </div>
   `,

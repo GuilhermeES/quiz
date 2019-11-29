@@ -85,3 +85,23 @@ body{
 .font-weight-light{
     font-size: 30px;
 }
+.btn-outline-primary{
+    float: right;
+}
+i.material-icons{
+    color: white;
+}
+.border-4{
+    background-color: #e7e3ea;
+}
+.border-5{
+    font-size: 30px;
+}
+.escolha{
+    font-weight: bold;
+}
+div.imagem{
+    content: url(assets/banner.png);
+    width: 550px;
+    padding: 20px;
+}

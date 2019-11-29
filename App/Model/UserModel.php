@@ -27,14 +27,16 @@ class UserModel
         $stmt->execute();
         $validacao = $stmt->fetch(PDO::FETCH_ASSOC);
 
-        if($validacao){
+        if($validacao) {
             $_SESSION['id'] = $validacao['id'];
+            $_SESSION['nivel'] = $validacao['nivel'];
             return true;
         }
         else{
             return false;
         }
     }
+
     //Função para buscar usuário
     public function buscaUsuario($id){
         $sql = "SELECT email, nome, nivel, id FROM usuario WHERE id = :id";
@@ -43,6 +45,7 @@ class UserModel
         $stmt->execute();
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
+
     //Função para destruir a sessão
     public function logout(){
         session_destroy();

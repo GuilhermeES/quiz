@@ -43,7 +43,6 @@ Vue.component('pergunta', {
                 },
                 body: JSON.stringify(this.quiz)
             }).then(resposta => {
-
             });
         },
         selecionaAlternativa(id:number){

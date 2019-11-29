@@ -38,7 +38,7 @@ class QuizModel
     }
 
     public function listagem(){
-        $sql = "SELECT id, usuario_id, nome FROM quiz  ";
+        $sql = "SELECT id, usuario_id, nome FROM quiz ";
         $stmt = $this->bd->prepare($sql);
         $stmt->execute();
         $quiz = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -73,7 +73,6 @@ class QuizModel
         $stmt->bindValue(":id", $id );
         $stmt->execute();
         return $stmt->rowCount() > 0;
-
     }
 
     public function update($nome,$id){
@@ -84,4 +83,24 @@ class QuizModel
         $stmt->execute();
         return $stmt->rowCount() > 0;
     }
+
+    public function inicioQuiz(){
+        $sql = "SELECT * FROM quiz";
+        $stmt = $this->bd->prepare($sql);
+        $stmt->execute();
+        $quiz = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $quiz;
+    }
+
+    public function cadastroRespostas($usuario_id, $alternativas_id, $data_cadastro){
+        $sql = "INSERT INTO resposta ( usuario_id, alternativas_id, data_cadastro) 
+                values ( :usuario_id, :alternativas_id, :data_cadastro)";
+        $stmt = $this->bd->prepare($sql);
+        $stmt->bindValue('usuario_id',$usuario_id);
+        $stmt->bindValue('alternativas_id',$alternativas_id);
+        $stmt->bindValue('data_cadastro', $data_cadastro);
+        $respostas = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $respostas;
+    }
+
 }

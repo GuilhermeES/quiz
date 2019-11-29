@@ -1,4 +1,5 @@
 Vue.component('login',{
+    props: ['usuario'],
     template: `<form class="form-signin"  v-on:submit="login($event)">
         <!--titulo formulario-->
         <h1 class="h3 mb-3 font-weight-normal">Entrar</h1>

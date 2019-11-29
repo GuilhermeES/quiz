@@ -23,19 +23,21 @@ class UserController
     }
 
     //Login usuario
-    public function login(Request $request, Response $response){
+    public function login(Request $request, Response $response)
+    {
         $post = $request->getParsedBody();
 
         $email = $post['email'];
         $senha = $post['senha'];
 
-        $data =[ "error"=> !$this->model->login($email,$senha)];
+        $data = ["error" => !$this->model->login($email, $senha)];
         $payload = json_encode($data);
         $response->getBody()->write($payload);
         return $response->withHeader('Content-Type', 'application/json');
     }
+
     //Buscar usuário
-    public function busca (Request $resquest, Response $response){
+    public function busca(Request $resquest, Response $response){
         $usuario = null;
         if(array_key_exists('id',$_SESSION)){
             $usuario = $this->model->buscaUsuario($_SESSION['id']);
@@ -44,6 +46,7 @@ class UserController
         $response->getBody()->write($payload);
         return $response->withHeader('Content-Type', 'application/json');
     }
+
     public function logout(Request $resquest, Response $response){
         $usuario = $this->model->logout();
         $payload = json_encode($usuario);
